@@ -1,6 +1,8 @@
 QuoterRails::Application.routes.draw do
-
-  root :to => 'home#index'
-
+  resources :users
   
+  root :to => 'users#index'
+  post 'login' => 'users#login', as: :session_init
+  get 'logout' => 'users#logout'
+
 end

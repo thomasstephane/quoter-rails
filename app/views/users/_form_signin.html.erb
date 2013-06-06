@@ -1,0 +1,11 @@
+<ul>
+  <%= form_tag session_init_path, :method => :post do %>
+    <li>
+      <%= email_field_tag :name, placeholder: "Name" %>
+    </li>
+    <li>
+      <%= password_field_tag :password, placeholder: "Password"  %>
+    </li>
+    <li><%= submit_tag 'Signin' %></li>
+  <% end %>
+</ul>
